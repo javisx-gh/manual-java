@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual de Java">
+    <meta name="author" content="Javier Macías Lara - I1I19">
+    <link rel="stylesheet" href="manualjava.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js" type="module"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Manual JAVA</title>
+</head>
+
+<body>
+    <div id="top">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container-fluid">
+            <img src="java.png" alt="Logo" width="2%" height="1%" class="d-inline-block align-text-top mx-3 my-3">
+            <a class="navbar-brand" href="#top">Manual JAVA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Intro">Introducción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Concepts">Conceptos básicos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#POO">Orientación a Objetos en Java</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Manejo de Errores y Excepciones</a></li> -->
+                            <li><a class="dropdown-item" href="#Colections">Colecciones en Java</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Entrada/Salida (E/S) en Java</a></li>
+                            <li><a class="dropdown-item" href="#">Programación Multihilo en Java</a></li>
+                            <li><a class="dropdown-item" href="#">Interfaz Gráfica de Usuario (GUI)</a></li>
+                            <li><a class="dropdown-item" href="#">Manejo de Eventos en Java</a></li>
+                            <li><a class="dropdown-item" href="#">Acceso a Bases de Datos con JDBC</a></li>
+                            <li><a class="dropdown-item" href="#">Desarrollo de Aplicaciones Web con Java</a></li>
+                            <li><a class="dropdown-item" href="#">Pruebas Unitarias en Java</a></li>
+                            <li><a class="dropdown-item" href="#">Despliegue de Aplicaciones Java</a></li>
+                            <li><a class="dropdown-item" href="#">Integración de Java con otras Tecnologías</a></li>
+                            <li><a class="dropdown-item" href="#">Desarrollo de Aplicaciones Empresariales con Java EE</a></li> -->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#IDEs">Herramientas de Desarrollo y Entorno de Desarrollo
+                                    Integrado (IDE)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <form id="searchForm" class="d-flex" role="search">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar..."
+                        aria-label="Buscar...">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <script>
+                    document.getElementById('searchForm').addEventListener('submit', function (event) {
+                        // Evitar el comportamiento predeterminado de enviar el formulario
+                        event.preventDefault();
+
+                        // Obtener el valor de la barra de búsqueda
+                        var searchTerm = document.getElementById('searchInput').value;
+
+                        // Aquí puedes realizar acciones con el término de búsqueda (por ejemplo, mostrar resultados en la página o enviar una solicitud al servidor)
+                        console.log('Término de búsqueda:', searchTerm);
+                    });
+                </script> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera -->
+    <div class="imagen-logo">
+        <img src="java.png" alt="Logo">
+        <h1>Manual JAVA</h1>
+    </div>
+
+    <div class="my-5 mx-5">
+
+        <!-- Indice -->
+        <div class="content-container">
+            <h1 class="my-3">Índice del Manual de Java</h1>
+
+            <ol>
+                <li><strong>Introducción a Java</strong>
+                    <ul>
+                        <li>¿Qué es Java?</li>
+                        <li>Plataformas de Java</li>
+                        <li>Instalación de Java</li>
+                    </ul>
+                </li>
+                <li><strong>Conceptos Básicos de Programación en Java</strong>
+                    <ul>
+                        <li>Variables y Tipos de Datos</li>
+                        <li>Operadores</li>
+                        <li>Estructuras de Control (if, else, switch)</li>
+                        <li>Bucles (for, while, do-while)</li>
+                    </ul>
+                </li>
+                <li><strong>Orientación a Objetos en Java</strong>
+                    <ul>
+                        <li>Clases y Objetos</li>
+                        <li>Herencia</li>
+                        <li>Polimorfismo</li>
+                        <li>Encapsulamiento</li>
+                        <li>Abstracción</li>
+                    </ul>
+                </li>
+                <!-- <li><strong>Manejo de Errores y Excepciones</strong>
+                    <ul>
+                        <li>Try, catch, finally</li>
+                        <li>Creación de Excepciones personalizadas</li>
+                    </ul>
+                </li> -->
+                <li><strong>Colecciones en Java</strong>
+                    <ul>
+                        <li>Listas (ArrayList, LinkedList)</li>
+                        <li>Conjuntos (HashSet, TreeSet)</li>
+                        <li>Mapas (HashMap, TreeMap)</li>
+                    </ul>
+                </li>
+                <!-- <li><strong>Entrada/Salida (E/S) en Java</strong>
+                    <ul>
+                        <li>Lectura y escritura de archivos</li>
+                        <li>Operaciones con flujos de datos</li>
+                    </ul>
+                </li>
+                <li><strong>Programación Multihilo en Java</strong>
+                    <ul>
+                        <li>Creación de hilos</li>
+                        <li>Sincronización de hilos</li>
+                    </ul>
+                </li>
+                <li><strong>Interfaz Gráfica de Usuario (GUI)</strong>
+                    <ul>
+                        <li>Introducción a Swing</li>
+                        <li>Creación de interfaces gráficas</li>
+                    </ul>
+                </li>
+                <li><strong>Manejo de Eventos en Java</strong>
+                    <ul>
+                        <li>EventListeners</li>
+                        <li>EventObjects</li>
+                    </ul>
+                </li>
+                <li><strong>Acceso a Bases de Datos con JDBC</strong>
+                    <ul>
+                        <li>Conexión a bases de datos</li>
+                        <li>Consultas SQL</li>
+                    </ul>
+                </li>
+                <li><strong>Desarrollo de Aplicaciones Web con Java</strong>
+                    <ul>
+                        <li>Servlets</li>
+                        <li>JavaServer Pages (JSP)</li>
+                        <li>Frameworks web (por ejemplo, Spring)</li>
+                    </ul>
+                </li>
+                <li><strong>Pruebas Unitarias en Java</strong>
+                    <ul>
+                        <li>JUnit</li>
+                        <li>Estrategias de pruebas</li>
+                    </ul>
+                </li>
+                <li><strong>Despliegue de Aplicaciones Java</strong>
+                    <ul>
+                        <li>Empaquetado (JAR, WAR)</li>
+                        <li>Servidores de aplicaciones</li>
+                    </ul>
+                </li>
+                <li><strong>Integración de Java con otras Tecnologías</strong>
+                    <ul>
+                        <li>Uso de APIs externas</li>
+                        <li>Consumo de servicios web</li>
+                    </ul>
+                </li>
+                <li><strong>Desarrollo de Aplicaciones Empresariales con Java EE (opcional)</strong>
+                    <ul>
+                        <li>Enterprise JavaBeans (EJB)</li>
+                        <li>Java Persistence API (JPA)</li>
+                    </ul>
+                </li> -->
+                <li><strong>Herramientas de Desarrollo y Entorno de Desarrollo Integrado (IDE)</strong>
+                    <ul>
+                        <li>Eclipse</li>
+                        <li>IntelliJ IDEA</li>
+                        <li>NetBeans</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="my-5 mx-5">
+
+            <!-- Acordeones de explicaciones -->
+            <div class="my-5"></div>
+            <h2 id="Intro" class="my-3">Introducción Java</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué es Java?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Java: Lenguaje de Programación</h1>
+
+                            <ol>
+                                <li>
+                                    <strong>Plataforma Independiente:</strong> Java es "write once, run anywhere"
+                                    (escribir
+                                    una vez, ejecutar en cualquier lugar) gracias a la Máquina Virtual Java (JVM).
+                                </li>
+                                <li>
+                                    <strong>Orientado a Objetos:</strong> Java sigue el paradigma de programación
+                                    orientado
+                                    a objetos, organizando programas en clases y objetos.
+                                </li>
+                                <li>
+                                    <strong>Seguridad:</strong> Java cuenta con un modelo de seguridad sólido que
+                                    protege
+                                    contra amenazas como virus y malware.
+                                </li>
+                                <li>
+                                    <strong>Multihilo (Multithreading):</strong> Ofrece soporte incorporado para la
+                                    programación multihilo, permitiendo la ejecución de múltiples tareas
+                                    simultáneamente.
+                                </li>
+                                <li>
+                                    <strong>Rica Biblioteca Estándar:</strong> Java incluye una amplia biblioteca
+                                    estándar
+                                    (API de Java) que facilita tareas comunes.
+                                </li>
+                                <li>
+                                    <strong>Comunidad Activa:</strong> Java tiene una comunidad de desarrolladores
+                                    activa y
+                                    numerosos recursos de aprendizaje.
+                                </li>
+                                <li>
+                                    <strong>Versatilidad de Aplicaciones:</strong> Se utiliza en desarrollo de
+                                    escritorio,
+                                    web, móvil (Android), sistemas embebidos, etc.
+                                </li>
+                                <li>
+                                    <strong>Desarrollo Empresarial:</strong> Ampliamente utilizado en aplicaciones
+                                    empresariales, con frameworks como Spring para escalabilidad y mantenibilidad.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Plataformas de Java
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Plataformas de Java</h1>
+
+                            <p>Java es una tecnología versátil que se utiliza en diversas plataformas. A
+                                continuación,
+                                se
+                                detallan algunas de las principales plataformas de Java:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Java Standard Edition (Java SE):</strong>
+                                    <p>Esta es la plataforma básica de Java y proporciona el entorno de ejecución
+                                        estándar y
+                                        las bibliotecas esenciales para el desarrollo de aplicaciones independientes
+                                        de
+                                        la
+                                        plataforma.</p>
+                                </li>
+                                <li>
+                                    <strong>Java Enterprise Edition (Java EE):</strong>
+                                    <p>Java EE es una extensión de Java SE que proporciona bibliotecas y APIs
+                                        adicionales
+                                        para el desarrollo de aplicaciones empresariales, especialmente aquellas que
+                                        requieren escalabilidad y transacciones distribuidas.</p>
+                                </li>
+                                <li>
+                                    <strong>Java Micro Edition (Java ME):</strong>
+                                    <p>Diseñada para dispositivos con recursos limitados, Java ME permite el
+                                        desarrollo
+                                        de
+                                        aplicaciones para dispositivos móviles, sistemas embebidos y otros
+                                        dispositivos
+                                        con
+                                        capacidad de conectividad.</p>
+                                </li>
+                                <li>
+                                    <strong>Android:</strong>
+                                    <p>Java es el lenguaje principal para el desarrollo de aplicaciones en la
+                                        plataforma
+                                        Android. Se utiliza en combinación con el kit de desarrollo de software
+                                        (SDK) de
+                                        Android para crear aplicaciones para dispositivos móviles.</p>
+                                </li>
+                                <li>
+                                    <strong>JavaFX:</strong>
+                                    <p>JavaFX es una plataforma para la creación de aplicaciones ricas en contenido,
+                                        incluidas aplicaciones con interfaces gráficas de usuario (GUI) avanzadas y
+                                        experiencias multimedia.</p>
+                                </li>
+                                <li>
+                                    <strong>Otras Plataformas:</strong>
+                                    <p>Java se utiliza en una variedad de contextos, desde desarrollo de servidores
+                                        hasta
+                                        sistemas integrados y soluciones empresariales.</p>
+                                </li>
+                            </ol>
+
+                            <p>La elección de la plataforma de Java dependerá de los requisitos específicos de tu
+                                proyecto y
+                                del tipo de aplicación que estás desarrollando.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Instalación de Java
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Instalación de Java</h1>
+
+                            <p>La instalación de Java es un paso fundamental para comenzar a desarrollar en este
+                                lenguaje. A
+                                continuación, se describen los pasos básicos:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Descargar Java:</strong>
+                                    <p>Visita el sitio web oficial de Java en <a
+                                            href="https://www.oracle.com/java/technologies/javase-downloads.html">Oracle
+                                            Java Downloads</a> o utiliza un proveedor de OpenJDK como AdoptOpenJDK.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Seleccionar la Versión:</strong>
+                                    <p>Elige la versión de Java que mejor se adapte a tus necesidades. Puede ser la
+                                        versión
+                                        estándar (Java SE) o una específica para desarrollo empresarial (Java EE).
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Descargar e Instalar:</strong>
+                                    <p>Descarga el instalador adecuado para tu sistema operativo y sigue las
+                                        instrucciones
+                                        para completar la instalación.</p>
+                                </li>
+                                <li>
+                                    <strong>Configurar Variables de Entorno:</strong>
+                                    <p>Configura las variables de entorno como <code>JAVA_HOME</code> y agrega el
+                                        directorio
+                                        <code>bin</code> al <code>PATH</code> para facilitar el uso de comandos Java
+                                        desde
+                                        la línea de comandos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Verificar la Instalación:</strong>
+                                    <p>Abre una ventana de terminal o símbolo del sistema y ejecuta
+                                        <code>java -version</code> para verificar que la instalación fue exitosa.
+                                    </p>
+                                </li>
+                            </ol>
+
+                            <p>Con estos pasos, deberías tener Java instalado y listo para comenzar a desarrollar
+                                aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-5"></div>
+            <h2 id="Concepts" class="my-3">Conceptos Básicos de Programación en Java</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Variables y Tipos de Datos
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Variables y Tipos de Datos en Java</h1>
+
+                            <p>En Java, las variables son espacios de almacenamiento que contienen datos y los tipos
+                                de
+                                datos definen qué tipo de datos pueden contener esas variables. A continuación, se
+                                detallan
+                                los conceptos básicos de variables y tipos de datos en Java:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Declaración de Variables:</strong>
+                                    <p>Para declarar una variable en Java, se utiliza la palabra clave
+                                        <code>int</code>
+                                        para
+                                        enteros, <code>double</code> para números de punto flotante,
+                                        <code>char</code>
+                                        para
+                                        caracteres, etc. Por ejemplo: <code>int edad;</code>
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Asignación de Valores:</strong>
+                                    <p>Una vez declarada, una variable puede asignarse con un valor mediante el
+                                        operador
+                                        de
+                                        asignación (<code>=</code>). Por ejemplo: <code>edad = 25;</code></p>
+                                </li>
+                                <li>
+                                    <strong>Tipo de Datos Primitivos:</strong>
+                                    <p>Java tiene tipos de datos primitivos como <code>int</code>,
+                                        <code>double</code>,
+                                        <code>char</code>, <code>boolean</code>, etc., que almacenan valores
+                                        simples.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Tipos de Datos de Referencia:</strong>
+                                    <p>Además de los tipos primitivos, Java también tiene tipos de datos de
+                                        referencia
+                                        como
+                                        <code>String</code>, que representan objetos y proporcionan funcionalidades
+                                        adicionales.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Constantes:</strong>
+                                    <p>Se pueden declarar constantes utilizando la palabra clave <code>final</code>.
+                                        Por
+                                        ejemplo: <code>final double PI = 3.14;</code></p>
+                                </li>
+                                <li>
+                                    <strong>Conversiones de Tipo (Casting):</strong>
+                                    <p>Es posible convertir valores entre diferentes tipos de datos mediante
+                                        casting.
+                                        Por
+                                        ejemplo: <code>int resultado = (int) 3.14;</code></p>
+                                </li>
+                            </ol>
+
+                            <p>Entender cómo trabajar con variables y tipos de datos es esencial para programar en
+                                Java,
+                                ya
+                                que proporciona la base para la manipulación de información en tus programas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Operadores
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Operadores en Java</h1>
+
+                            <p>Los operadores son símbolos especiales que realizan operaciones en una o más
+                                variables.
+                                En
+                                Java, hay varios tipos de operadores que se pueden clasificar en diferentes
+                                categorías.
+                                A
+                                continuación, se presentan los operadores fundamentales:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Operadores Aritméticos:</strong>
+                                    <p>Realizan operaciones matemáticas básicas, como suma (<code>+</code>), resta
+                                        (<code>-</code>), multiplicación (<code>*</code>), división
+                                        (<code>/</code>), y
+                                        módulo (<code>%</code>).</p>
+                                </li>
+                                <li>
+                                    <strong>Operadores de Asignación:</strong>
+                                    <p>Asignan valores a variables. El operador de asignación básico es
+                                        (<code>=</code>),
+                                        pero también hay operadores combinados como (<code>+=</code>,
+                                        <code>-=</code>,
+                                        etc.).
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Operadores de Comparación:</strong>
+                                    <p>Comparan dos valores y devuelven un resultado booleano (<code>true</code> o
+                                        <code>false</code>). Ejemplos incluyen (<code>==</code>, <code>!=</code>,
+                                        <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>,
+                                        <code>&gt;=</code>).
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Operadores Lógicos:</strong>
+                                    <p>Realizan operaciones lógicas en valores booleanos. Los operadores lógicos
+                                        incluyen
+                                        (<code>&&</code> para "y", <code>||</code> para "o", <code>!</code> para
+                                        "no").
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Operadores de Incremento/Decremento:</strong>
+                                    <p>Incrementan (<code>++</code>) o decrementan (<code>--</code>) el valor de una
+                                        variable en una unidad.</p>
+                                </li>
+                                <li>
+                                    <strong>Operadores de Concatenación:</strong>
+                                    <p>En el caso de cadenas, el operador (<code>+</code>) se utiliza para
+                                        concatenar o
+                                        unir
+                                        dos cadenas.</p>
+                                </li>
+                                <li>
+                                    <strong>Operadores de Ternario:</strong>
+                                    <p>Permiten tomar decisiones basadas en una condición. El operador ternario
+                                        (<code>?</code>) es una forma abreviada de la estructura
+                                        <code>if-else</code>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Operadores de Desplazamiento (Bitwise):</strong>
+                                    <p>Realizan desplazamientos de bits en operaciones con números enteros. Los
+                                        operadores
+                                        incluyen (<code>&lt;&lt;</code> para desplazamiento a la izquierda,
+                                        <code>&gt;&gt;</code> para desplazamiento a la derecha).
+                                    </p>
+                                </li>
+                            </ol>
+
+                            <p>Comprender cómo utilizar estos operadores es esencial para realizar operaciones
+                                efectivas
+                                en
+                                programas Java.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Estructuras de Control (if, else, switch)
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Estructuras de Control en Java</h1>
+
+                            <p>Las estructuras de control en Java permiten tomar decisiones y controlar el flujo de
+                                ejecución del programa. Las más comunes son las estructuras <code>if</code>,
+                                <code>else</code> y <code>switch</code>. A continuación, se describen estas
+                                estructuras:
+                            </p>
+
+                            <ol>
+                                <li>
+                                    <strong>Condicionales if-else:</strong>
+                                    <p>La estructura <code>if</code> permite ejecutar un bloque de código si una
+                                        condición es verdadera. Si la condición es falsa, se puede proporcionar un
+                                        bloque <code>else</code> que se ejecutará en su lugar.</p>
+                                    <pre>
+                <code>
+if (condicion) {
+    // Código a ejecutar si la condición es verdadera
+} else {
+    // Código a ejecutar si la condición es falsa
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Estructuras anidadas if-else:</strong>
+                                    <p>Es posible anidar varias estructuras <code>if-else</code> para manejar
+                                        múltiples
+                                        condiciones.</p>
+                                    <pre>
+                <code>
+if (condicion1) {
+    // Código a ejecutar si la condición 1 es verdadera
+} else if (condicion2) {
+    // Código a ejecutar si la condición 1 es falsa y la condición 2 es verdadera
+} else {
+    // Código a ejecutar si ninguna condición es verdadera
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Estructura switch:</strong>
+                                    <p>La estructura <code>switch</code> permite evaluar el valor de una expresión y
+                                        ejecutar diferentes bloques de código según el valor. Se utiliza cuando se
+                                        tienen múltiples casos posibles.</p>
+                                    <pre>
+                <code>
+switch (expresion) {
+    case valor1:
+        // Código a ejecutar si expresion es igual a valor1
+        break;
+    case valor2:
+        // Código a ejecutar si expresion es igual a valor2
+        break;
+    // Más casos...
+    default:
+        // Código a ejecutar si ningún caso coincide
+}
+                </code>
+            </pre>
+                                </li>
+                            </ol>
+
+                            <p>Estas estructuras de control son esenciales para dirigir el flujo de ejecución de un
+                                programa y permiten que los programas tomen decisiones dinámicamente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Bucles (for, while, do-while)
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Bucles en Java</h1>
+
+                            <p>Los bucles permiten ejecutar repetidamente un bloque de código mientras se cumple una
+                                condición. En Java, los bucles más comunes son <code>for</code>, <code>while</code>
+                                y
+                                <code>do-while</code>. A continuación, se describen estas estructuras:
+                            </p>
+
+                            <ol>
+                                <li>
+                                    <strong>Bucle for:</strong>
+                                    <p>El bucle <code>for</code> permite especificar la inicialización, la condición
+                                        de
+                                        continuación y la expresión de actualización en una sola línea.</p>
+                                    <pre>
+                <code>
+for (inicialización; condición; expresión de actualización) {
+    // Código a ejecutar en cada iteración
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Bucle while:</strong>
+                                    <p>El bucle <code>while</code> ejecuta un bloque de código mientras una
+                                        condición
+                                        sea verdadera.</p>
+                                    <pre>
+                <code>
+while (condición) {
+    // Código a ejecutar mientras la condición sea verdadera
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Bucle do-while:</strong>
+                                    <p>El bucle <code>do-while</code> ejecuta un bloque de código al menos una vez,
+                                        y
+                                        luego repite el bloque mientras una condición sea verdadera.</p>
+                                    <pre>
+                <code>
+do {
+    // Código a ejecutar al menos una vez
+} while (condición);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Break y Continue:</strong>
+                                    <p>En bucles, la palabra clave <code>break</code> se utiliza para salir del
+                                        bucle
+                                        antes de que se cumpla la condición de terminación. La palabra clave
+                                        <code>continue</code> se utiliza para saltar a la siguiente iteración.
+                                    </p>
+                                    <pre>
+                <code>
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // Sale del bucle cuando i es igual a 5
+    }
+    if (i % 2 == 0) {
+        continue; // Salta a la siguiente iteración si i es par
+    }
+    // Código a ejecutar en cada iteración
+}
+                </code>
+            </pre>
+                                </li>
+                            </ol>
+
+                            <p>Estas estructuras de bucle son esenciales para ejecutar tareas repetitivas de manera
+                                eficiente en programas Java.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-5"></div>
+            <h2 id="POO" class="my-3">Orientación a Objetos en Java</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Clases y Objetos
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Clases y Objetos en Java</h1>
+
+                            <p>La programación orientada a objetos (POO) es un paradigma fundamental en Java, donde las
+                                clases y objetos son componentes esenciales. A continuación, se describen estos
+                                conceptos:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Definición de Clases:</strong>
+                                    <p>Una clase es un modelo o plano para crear objetos. Contiene atributos (variables)
+                                        y métodos (funciones) que describen el comportamiento del objeto.</p>
+                                    <pre>
+                <code>
+public class MiClase {
+    // Atributos
+    private int miAtributo;
+    
+    // Métodos
+    public void miMetodo() {
+        // Código del método
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Creación de Objetos:</strong>
+                                    <p>Un objeto es una instancia de una clase. Se crea utilizando la palabra clave
+                                        <code>new</code> seguida del nombre de la clase y el constructor.
+                                    </p>
+                                    <pre>
+                <code>
+MiClase miObjeto = new MiClase();
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Encapsulamiento:</strong>
+                                    <p>La encapsulación es el principio de la POO que oculta la implementación interna
+                                        de un objeto y solo expone lo que es necesario. Se logra mediante el uso de
+                                        modificadores de acceso como <code>public</code>, <code>private</code>, y
+                                        <code>protected</code>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Herencia:</strong>
+                                    <p>La herencia permite que una clase herede atributos y métodos de otra clase. Esto
+                                        facilita la reutilización del código y la creación de jerarquías de clases.</p>
+                                    <pre>
+                <code>
+public class MiClaseHija extends MiClase {
+    // Atributos y métodos adicionales
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Polimorfismo:</strong>
+                                    <p>El polimorfismo permite que un objeto se comporte de diferentes maneras según el
+                                        contexto. Puede lograrse mediante la sobreescritura de métodos (anulación) y la
+                                        implementación de interfaces.</p>
+                                    <pre>
+                <code>
+public interface MiInterfaz {
+    void metodoComun();
+}
+
+public class MiClase implements MiInterfaz {
+    public void metodoComun() {
+        // Implementación del método
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                            </ol>
+
+                            <p>La programación orientada a objetos proporciona una forma organizada y eficiente de
+                                diseñar y estructurar el código en Java.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Herencia
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Herencia en Java</h1>
+
+                            <p>La herencia es un concepto clave en la programación orientada a objetos que permite que
+                                una clase herede atributos y comportamientos de otra clase. A continuación, se describen
+                                los conceptos relacionados con la herencia en Java:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Definición de una Clase Padre (Superclase):</strong>
+                                    <p>Una clase padre es una clase base que proporciona atributos y métodos generales
+                                        que pueden ser compartidos por otras clases. Se declara con la palabra clave
+                                        <code>class</code>.
+                                    </p>
+                                    <pre>
+                <code>
+public class Animal {
+    protected String nombre;
+
+    public Animal(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void hacerSonido() {
+        System.out.println("Haciendo algún sonido");
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Creación de una Clase Hija (Subclase):</strong>
+                                    <p>Una clase hija hereda de una clase padre utilizando la palabra clave
+                                        <code>extends</code>. La clase hija puede agregar nuevos atributos y métodos o
+                                        incluso anular los métodos heredados.
+                                    </p>
+                                    <pre>
+                <code>
+public class Perro extends Animal {
+    private String raza;
+
+    public Perro(String nombre, String raza) {
+        super(nombre);
+        this.raza = raza;
+    }
+
+    // Método específico para la clase Perro
+    public void ladrar() {
+        System.out.println("Guau guau");
+    }
+
+    // Anulación del método heredado
+    @Override
+    public void hacerSonido() {
+        System.out.println("El perro está ladrando");
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Acceso a Atributos Protegidos:</strong>
+                                    <p>Los atributos marcados como <code>protected</code> en la clase padre son
+                                        accesibles en las clases hijas. Esto permite la encapsulación controlada de
+                                        datos.</p>
+                                </li>
+                                <li>
+                                    <strong>Constructor de la Clase Hija:</strong>
+                                    <p>El constructor de la clase hija puede llamar al constructor de la clase padre
+                                        utilizando <code>super()</code> para inicializar los atributos heredados.</p>
+                                </li>
+                                <li>
+                                    <strong>Palabra Clave "super":</strong>
+                                    <p>La palabra clave <code>super</code> se utiliza para hacer referencia a los
+                                        miembros de la clase padre desde la clase hija. Puede usarse para llamar a
+                                        métodos de la clase padre o al constructor de la clase padre.</p>
+                                </li>
+                            </ol>
+
+                            <p>La herencia permite la reutilización de código y facilita la creación de jerarquías de
+                                clases en Java.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            Polimorfismo
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Polimorfismo en Java</h1>
+
+                            <p>El polimorfismo es un concepto fundamental en la programación orientada a objetos que
+                                permite que un objeto se comporte de diferentes maneras según el contexto. En Java, el
+                                polimorfismo puede lograrse mediante la sobreescritura de métodos y la implementación de
+                                interfaces. A continuación, se describen los aspectos clave del polimorfismo:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Sobreescritura de Métodos:</strong>
+                                    <p>En una jerarquía de clases, una subclase puede proporcionar una implementación
+                                        específica de un método que ya está definido en su clase base (superclase). Esto
+                                        se conoce como sobreescritura de métodos.</p>
+                                    <pre>
+                <code>
+public class Animal {
+    public void hacerSonido() {
+        System.out.println("Haciendo algún sonido");
+    }
+}
+
+public class Perro extends Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("El perro está ladrando");
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Polimorfismo a través de Interfaces:</strong>
+                                    <p>Las interfaces en Java permiten definir un conjunto de métodos que deben ser
+                                        implementados por cualquier clase que las implemente. Esto proporciona una forma
+                                        de polimorfismo a través de interfaces.</p>
+                                    <pre>
+                <code>
+public interface Sonido {
+    void hacerSonido();
+}
+
+public class Perro implements Sonido {
+    @Override
+    public void hacerSonido() {
+        System.out.println("El perro está ladrando");
+    }
+}
+
+public class Gato implements Sonido {
+    @Override
+    public void hacerSonido() {
+        System.out.println("El gato está maullando");
+    }
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Uso de la Clase Base como Tipo:</strong>
+                                    <p>En el polimorfismo, un objeto de la clase base puede ser tratado como un objeto
+                                        de la clase derivada. Esto permite mayor flexibilidad en el código.</p>
+                                    <pre>
+                <code>
+Animal miMascota = new Perro();
+miMascota.hacerSonido(); // Llama al método de Perro
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Casting (Conversión de Tipos):</strong>
+                                    <p>Es posible realizar casting para convertir un objeto de una clase base a una
+                                        clase derivada y acceder a los métodos específicos de esa clase.</p>
+                                    <pre>
+                <code>
+if (miMascota instanceof Perro) {
+    Perro miPerro = (Perro) miMascota;
+    miPerro.ladrar(); // Accede al método específico de Perro
+}
+                </code>
+            </pre>
+                                </li>
+                            </ol>
+
+                            <p>El polimorfismo proporciona flexibilidad y extensibilidad en el diseño de programas
+                                orientados a objetos en Java.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            Encapsulamiento
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Encapsulamiento en Java</h1>
+
+                            <p>El encapsulamiento es uno de los principios fundamentales de la programación orientada a
+                                objetos que consiste en ocultar la implementación interna de un objeto y permitir el
+                                acceso controlado a sus atributos y métodos. A continuación, se describen los aspectos
+                                clave del encapsulamiento en Java:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Modificadores de Acceso:</strong>
+                                    <p>En Java, se utilizan modificadores de acceso para especificar la visibilidad de
+                                        los miembros de una clase. Los principales modificadores son
+                                        <code>public</code>, <code>private</code>, y <code>protected</code>.
+                                    </p>
+                                    <pre>
+                <code>
+public class MiClase {
+    private int atributoPrivado;
+    public String atributoPublico;
+    protected double atributoProtegido;
+    
+    // Métodos...
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Private (Privado):</strong>
+                                    <p>Los miembros declarados como <code>private</code> solo son accesibles dentro de
+                                        la propia clase. No pueden ser accedidos directamente desde fuera de la clase.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Public (Público):</strong>
+                                    <p>Los miembros declarados como <code>public</code> son accesibles desde cualquier
+                                        parte del programa. No hay restricciones en el acceso a estos miembros.</p>
+                                </li>
+                                <li>
+                                    <strong>Protected (Protegido):</strong>
+                                    <p>Los miembros declarados como <code>protected</code> son accesibles dentro de la
+                                        propia clase y por clases derivadas (subclases).</p>
+                                </li>
+                                <li>
+                                    <strong>Getters y Setters:</strong>
+                                    <p>Para acceder y modificar los atributos privados de una clase, se suelen utilizar
+                                        métodos llamados <code>getters</code> y <code>setters</code>. Estos métodos
+                                        permiten un control más preciso sobre el acceso a los datos internos de un
+                                        objeto.</p>
+                                    <pre>
+                <code>
+public class Persona {
+    private String nombre;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nuevoNombre) {
+        nombre = nuevoNombre;
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Beneficios del Encapsulamiento:</strong>
+                                    <p>El encapsulamiento proporciona un nivel de seguridad al ocultar la implementación
+                                        interna y controlar el acceso a los miembros de una clase. Además, facilita el
+                                        mantenimiento y evita dependencias no deseadas en otras partes del código.</p>
+                                </li>
+                            </ol>
+
+                            <p>El encapsulamiento es esencial para crear programas robustos y mantener la integridad de
+                                los datos en aplicaciones Java.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                            Abstracción
+                        </button>
+                    </h2>
+                    <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Abstracción en Java</h1>
+
+                            <p>La abstracción es un principio de la programación orientada a objetos que consiste en
+                                simplificar y modelar la realidad mediante la creación de clases y objetos que
+                                representan entidades y conceptos del mundo real. A continuación, se describen los
+                                aspectos clave de la abstracción en Java:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Clases Abstractas:</strong>
+                                    <p>Una clase abstracta es una clase que no puede ser instanciada directamente y
+                                        puede contener métodos abstractos. Los métodos abstractos son declarados pero no
+                                        proporcionan implementación en la clase abstracta. Las clases hijas deben
+                                        implementar los métodos abstractos.</p>
+                                    <pre>
+                <code>
+public abstract class Figura {
+    private String color;
+
+    public Figura(String color) {
+        this.color = color;
+    }
+
+    // Método abstracto
+    public abstract double calcularArea();
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Métodos Abstractos:</strong>
+                                    <p>Un método abstracto es un método que no tiene implementación en la clase en la
+                                        que se declara. Debe ser implementado por cualquier clase que herede de la clase
+                                        abstracta que lo contiene.</p>
+                                    <pre>
+                <code>
+public class Circulo extends Figura {
+    private double radio;
+
+    public Circulo(String color, double radio) {
+        super(color);
+        this.radio = radio;
+    }
+
+    // Implementación del método abstracto
+    @Override
+    public double calcularArea() {
+        return Math.PI * radio * radio;
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Interfaces:</strong>
+                                    <p>Una interfaz es una colección de métodos abstractos. A diferencia de las clases
+                                        abstractas, una clase puede implementar múltiples interfaces. Las interfaces
+                                        permiten una mayor flexibilidad en la modelación de la abstracción.</p>
+                                    <pre>
+                <code>
+public interface Reproducible {
+    void reproducir();
+    void pausar();
+}
+
+public class ReproductorMP3 implements Reproducible {
+    // Implementación de los métodos de la interfaz
+    public void reproducir() {
+        // Código para reproducir
+    }
+
+    public void pausar() {
+        // Código para pausar
+    }
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Uso de Clases y Objetos:</strong>
+                                    <p>La abstracción se manifiesta en la creación de clases y objetos que representan
+                                        conceptos del mundo real. Estos objetos encapsulan datos y comportamientos
+                                        relacionados, simplificando la interacción con el sistema.</p>
+                                    <pre>
+                <code>
+Circulo miCirculo = new Circulo("Rojo", 5.0);
+double area = miCirculo.calcularArea();
+System.out.println("Área del círculo: " + area);
+                </code>
+            </pre>
+                                </li>
+                            </ol>
+
+                            <p>La abstracción permite simplificar la complejidad del mundo real y modelar conceptos de
+                                manera efectiva en programas Java.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-5"></div>
+            <h2 id="Colections" class="my-3">Colecciones en Java</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
+                            Listas
+                        </button>
+                    </h2>
+                    <div id="collapseThirteen" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Listas en Java (ArrayList, LinkedList)</h1>
+
+                            <p>Las listas son estructuras de datos fundamentales en Java que permiten almacenar y
+                                manipular colecciones de elementos. Dos implementaciones comunes de listas en Java son
+                                ArrayList y LinkedList. A continuación, se describen estas estructuras:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>ArrayList:</strong>
+                                    <p>ArrayList es una implementación de la interfaz List que utiliza un array dinámico
+                                        para almacenar elementos. Proporciona acceso rápido a los elementos mediante
+                                        índices, pero puede ser menos eficiente en operaciones de inserción y
+                                        eliminación en comparación con LinkedList.</p>
+                                    <pre>
+                <code>
+import java.util.ArrayList;
+
+// Crear un ArrayList de enteros
+ArrayList&lt;Integer&gt; listaEnteros = new ArrayList&lt;&gt;();
+
+// Agregar elementos a la lista
+listaEnteros.add(10);
+listaEnteros.add(20);
+listaEnteros.add(30);
+
+// Acceder a elementos por índice
+int primerElemento = listaEnteros.get(0);
+System.out.println("Primer elemento: " + primerElemento);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>LinkedList:</strong>
+                                    <p>LinkedList es otra implementación de la interfaz List que utiliza una estructura
+                                        de nodos enlazados. Proporciona un rendimiento eficiente en operaciones de
+                                        inserción y eliminación, pero puede ser más lento en acceso aleatorio mediante
+                                        índices.</p>
+                                    <pre>
+                <code>
+import java.util.LinkedList;
+
+// Crear una LinkedList de cadenas
+LinkedList&lt;String&gt; listaCadenas = new LinkedList&lt;&gt;();
+
+// Agregar elementos a la lista
+listaCadenas.add("Hola");
+listaCadenas.add("Mundo");
+
+// Acceder a elementos y modificar la lista
+String primerElemento = listaCadenas.getFirst();
+listaCadenas.addLast("!");
+
+System.out.println("Lista después de la modificación: " + listaCadenas);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Operaciones Comunes en Listas:</strong>
+                                    <ul>
+                                        <li><code>add(elemento):</code> Agrega un elemento al final de la lista.</li>
+                                        <li><code>get(índice):</code> Obtiene el elemento en la posición especificada.
+                                        </li>
+                                        <li><code>remove(índice):</code> Elimina el elemento en la posición
+                                            especificada.</li>
+                                        <li><code>size():</code> Devuelve el tamaño (número de elementos) de la lista.
+                                        </li>
+                                        <li><code>clear():</code> Elimina todos los elementos de la lista.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Uso de Iteradores:</strong>
+                                    <p>Se pueden utilizar iteradores para recorrer los elementos de una lista de manera
+                                        eficiente. Tanto ArrayList como LinkedList implementan la interfaz Iterable.</p>
+                                    <pre>
+                <code>
+// Iterar sobre los elementos de ArrayList
+for (Integer numero : listaEnteros) {
+    System.out.println(numero);
+}
+
+// Iterar sobre los elementos de LinkedList
+for (String cadena : listaCadenas) {
+    System.out.println(cadena);
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Elección entre ArrayList y LinkedList:</strong>
+                                    <p>La elección entre ArrayList y LinkedList depende de los requisitos específicos de
+                                        la aplicación. ArrayList es más eficiente en acceso aleatorio, mientras que
+                                        LinkedList es más eficiente en operaciones de inserción y eliminación en el
+                                        medio de la lista.</p>
+                                </li>
+                            </ol>
+
+                            <p>Las listas son herramientas poderosas en Java para gestionar colecciones de elementos de
+                                manera dinámica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                            Conjuntos
+                        </button>
+                    </h2>
+                    <div id="collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Conjuntos en Java (HashSet, TreeSet)</h1>
+
+                            <p>Los conjuntos son estructuras de datos en Java que representan una colección de elementos
+                                únicos. Dos implementaciones comunes de conjuntos en Java son HashSet y TreeSet. A
+                                continuación, se describen estas estructuras:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>HashSet:</strong>
+                                    <p>HashSet es una implementación de la interfaz Set que utiliza una tabla hash para
+                                        almacenar elementos. Garantiza la no duplicación de elementos y no garantiza un
+                                        orden específico de los elementos.</p>
+                                    <pre>
+                <code>
+import java.util.HashSet;
+
+// Crear un HashSet de cadenas
+HashSet&lt;String&gt; conjuntoCadenas = new HashSet&lt;&gt;();
+
+// Agregar elementos al conjunto
+conjuntoCadenas.add("Rojo");
+conjuntoCadenas.add("Verde");
+conjuntoCadenas.add("Azul");
+
+// Comprobar la existencia de un elemento
+boolean contieneRojo = conjuntoCadenas.contains("Rojo");
+System.out.println("¿Contiene Rojo? " + contieneRojo);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>TreeSet:</strong>
+                                    <p>TreeSet es otra implementación de la interfaz Set que utiliza un árbol rojo-negro
+                                        para almacenar elementos. Garantiza la no duplicación de elementos y ordena los
+                                        elementos en orden natural o mediante un comparador personalizado.</p>
+                                    <pre>
+                <code>
+import java.util.TreeSet;
+
+// Crear un TreeSet de números enteros
+TreeSet&lt;Integer&gt; conjuntoNumeros = new TreeSet&lt;&gt;();
+
+// Agregar elementos al conjunto
+conjuntoNumeros.add(10);
+conjuntoNumeros.add(5);
+conjuntoNumeros.add(20);
+
+// Obtener el primer elemento (menor elemento)
+int primerElemento = conjuntoNumeros.first();
+System.out.println("Primer elemento: " + primerElemento);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Operaciones Comunes en Conjuntos:</strong>
+                                    <ul>
+                                        <li><code>add(elemento):</code> Agrega un elemento al conjunto.</li>
+                                        <li><code>remove(elemento):</code> Elimina un elemento del conjunto.</li>
+                                        <li><code>contains(elemento):</code> Verifica la existencia de un elemento en el
+                                            conjunto.</li>
+                                        <li><code>size():</code> Devuelve el tamaño (número de elementos) del conjunto.
+                                        </li>
+                                        <li><code>clear():</code> Elimina todos los elementos del conjunto.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Orden en TreeSet:</strong>
+                                    <p>TreeSet mantiene los elementos ordenados según su valor natural o mediante un
+                                        comparador personalizado. Esto permite iterar sobre los elementos en un orden
+                                        específico.</p>
+                                    <pre>
+                <code>
+// Iterar sobre los elementos en orden ascendente
+for (Integer numero : conjuntoNumeros) {
+    System.out.println(numero);
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Elección entre HashSet y TreeSet:</strong>
+                                    <p>La elección entre HashSet y TreeSet depende de los requisitos específicos de la
+                                        aplicación. HashSet generalmente ofrece un rendimiento mejor para operaciones de
+                                        búsqueda, mientras que TreeSet mantiene los elementos ordenados.</p>
+                                </li>
+                            </ol>
+
+                            <p>Los conjuntos son herramientas eficaces en Java para gestionar colecciones de elementos
+                                únicos de manera eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                            Mapas
+                        </button>
+                    </h2>
+                    <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Mapas en Java (HashMap, TreeMap)</h1>
+
+                            <p>Los mapas son estructuras de datos en Java que almacenan pares clave-valor, donde cada
+                                clave está asociada a un valor único. Dos implementaciones comunes de mapas en Java son
+                                HashMap y TreeMap. A continuación, se describen estas estructuras:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>HashMap:</strong>
+                                    <p>HashMap es una implementación de la interfaz Map que utiliza una tabla hash para
+                                        almacenar pares clave-valor. Proporciona acceso rápido a los elementos mediante
+                                        claves y no garantiza un orden específico de los elementos.</p>
+                                    <pre>
+                <code>
+import java.util.HashMap;
+
+// Crear un HashMap de nombres y edades
+HashMap&lt;String, Integer&gt; mapaEdades = new HashMap&lt;&gt;();
+
+// Agregar pares clave-valor al mapa
+mapaEdades.put("Alice", 25);
+mapaEdades.put("Bob", 30);
+mapaEdades.put("Charlie", 22);
+
+// Obtener la edad de Alice
+int edadDeAlice = mapaEdades.get("Alice");
+System.out.println("Edad de Alice: " + edadDeAlice);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>TreeMap:</strong>
+                                    <p>TreeMap es otra implementación de la interfaz Map que utiliza un árbol rojo-negro
+                                        para almacenar pares clave-valor. Garantiza un orden natural de las claves o un
+                                        orden definido por un comparador personalizado.</p>
+                                    <pre>
+                <code>
+import java.util.TreeMap;
+
+// Crear un TreeMap de nombres y edades
+TreeMap&lt;String, Integer&gt; mapaEdadesOrdenado = new TreeMap&lt;&gt;();
+
+// Agregar pares clave-valor al mapa
+mapaEdadesOrdenado.put("Alice", 25);
+mapaEdadesOrdenado.put("Bob", 30);
+mapaEdadesOrdenado.put("Charlie", 22);
+
+// Obtener el primer elemento (menor clave)
+String primerNombre = mapaEdadesOrdenado.firstKey();
+System.out.println("Primer nombre: " + primerNombre);
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Operaciones Comunes en Mapas:</strong>
+                                    <ul>
+                                        <li><code>put(clave, valor):</code> Agrega un par clave-valor al mapa.</li>
+                                        <li><code>get(clave):</code> Obtiene el valor asociado a una clave.</li>
+                                        <li><code>remove(clave):</code> Elimina un par clave-valor del mapa.</li>
+                                        <li><code>containsKey(clave):</code> Verifica la existencia de una clave en el
+                                            mapa.</li>
+                                        <li><code>keySet():</code> Devuelve un conjunto de todas las claves del mapa.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Orden en TreeMap:</strong>
+                                    <p>TreeMap mantiene las claves ordenadas según su valor natural o mediante un
+                                        comparador personalizado. Esto permite iterar sobre las claves en un orden
+                                        específico.</p>
+                                    <pre>
+                <code>
+// Iterar sobre las claves en orden ascendente
+for (String nombre : mapaEdadesOrdenado.keySet()) {
+    System.out.println(nombre + ": " + mapaEdadesOrdenado.get(nombre));
+}
+                </code>
+            </pre>
+                                </li>
+                                <li>
+                                    <strong>Elección entre HashMap y TreeMap:</strong>
+                                    <p>La elección entre HashMap y TreeMap depende de los requisitos específicos de la
+                                        aplicación. HashMap ofrece un rendimiento mejor para búsquedas, mientras que
+                                        TreeMap mantiene las claves ordenadas.</p>
+                                </li>
+                            </ol>
+
+                            <p>Los mapas son herramientas versátiles en Java para asociar información y realizar
+                                búsquedas eficientes mediante claves.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-5"></div>
+            <h2 id="IDEs" class="my-3">Herramientas de Desarrollo y Entorno de Desarrollo Integrado (IDE)</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen">
+                            Eclipse
+                        </button>
+                    </h2>
+                    <div id="collapseSixteen" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>Eclipse IDE</h1>
+
+                            <p>Eclipse es un entorno de desarrollo integrado (IDE) ampliamente utilizado para programar
+                                en diversos lenguajes, incluyendo Java. A continuación, se describen características
+                                clave y pasos básicos para usar Eclipse:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Descarga e Instalación:</strong>
+                                    <p>Descarga Eclipse desde el sitio oficial: <a
+                                            href="https://www.eclipse.org/downloads/"
+                                            target="_blank">https://www.eclipse.org/downloads/</a>. Selecciona la
+                                        versión adecuada para tu sistema operativo y sigue las instrucciones de
+                                        instalación.</p>
+                                </li>
+                                <li>
+                                    <strong>Inicio y Espacio de Trabajo:</strong>
+                                    <p>Después de la instalación, inicia Eclipse. Al abrirse por primera vez, te pedirá
+                                        que elijas un "espacio de trabajo" donde se guardarán tus proyectos. El espacio
+                                        de trabajo es el directorio principal donde Eclipse almacenará tus
+                                        configuraciones y proyectos.</p>
+                                </li>
+                                <li>
+                                    <strong>Crear un Proyecto:</strong>
+                                    <ul>
+                                        <li>Selecciona "File" (Archivo) > "New" (Nuevo) > "Java Project" (Proyecto
+                                            Java).</li>
+                                        <li>Ingresa un nombre para tu proyecto y haz clic en "Finish" (Finalizar).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Crear una Clase:</strong>
+                                    <ul>
+                                        <li>En el explorador de paquetes, haz clic derecho en la carpeta del proyecto.
+                                        </li>
+                                        <li>Selecciona "New" (Nuevo) > "Class" (Clase).</li>
+                                        <li>Ingresa un nombre para tu clase y marca la opción "public static void
+                                            main(String[] args)" si estás creando una clase principal.</li>
+                                        <li>Haz clic en "Finish" (Finalizar).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Editor de Código:</strong>
+                                    <p>Eclipse proporciona un editor de código con características como resaltado de
+                                        sintaxis, autocompletado y navegación rápida. Escribe tu código en el editor de
+                                        clases recién creada.</p>
+                                </li>
+                                <li>
+                                    <strong>Ejecutar el Programa:</strong>
+                                    <ul>
+                                        <li>Haz clic derecho en tu clase principal.</li>
+                                        <li>Selecciona "Run As" (Ejecutar como) > "Java Application" (Aplicación Java).
+                                        </li>
+                                        <li>Observa la salida en la consola.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Depuración:</strong>
+                                    <p>Eclipse ofrece herramientas de depuración poderosas. Coloca puntos de
+                                        interrupción en tu código, inicia la depuración y observa cómo se ejecuta paso a
+                                        paso.</p>
+                                </li>
+                                <li>
+                                    <strong>Control de Versiones:</strong>
+                                    <p>Eclipse tiene soporte integrado para sistemas de control de versiones como Git.
+                                        Puedes clonar repositorios, hacer commits y gestionar ramas directamente desde
+                                        el IDE.</p>
+                                </li>
+                                <li>
+                                    <strong>Plugins y Extensiones:</strong>
+                                    <p>Explora el vasto ecosistema de plugins de Eclipse para ampliar sus capacidades.
+                                        Puedes instalar plugins para otros lenguajes de programación, frameworks y
+                                        herramientas de desarrollo.</p>
+                                </li>
+                                <li>
+                                    <strong>Comunidad y Recursos:</strong>
+                                    <p>Únete a la activa comunidad de usuarios de Eclipse. Hay abundantes recursos en
+                                        línea, tutoriales y foros para obtener ayuda y aprender más sobre el uso
+                                        avanzado del IDE.</p>
+                                </li>
+                            </ol>
+
+                            <p>Eclipse es una herramienta robusta que facilita el desarrollo de software en Java y otras
+                                tecnologías. Con su amplia gama de características, es una opción popular entre los
+                                desarrolladores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                            IntelliJ IDEA
+                        </button>
+                    </h2>
+                    <div id="collapseSeventeen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>IntelliJ IDEA</h1>
+
+                            <p>IntelliJ IDEA es un entorno de desarrollo integrado (IDE) creado por JetBrains y
+                                ampliamente utilizado para el desarrollo de software en diversos lenguajes, incluyendo
+                                Java. A continuación, se describen características clave y pasos básicos para usar
+                                IntelliJ IDEA:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Descarga e Instalación:</strong>
+                                    <p>Descarga IntelliJ IDEA desde el sitio oficial: <a
+                                            href="https://www.jetbrains.com/idea/download/"
+                                            target="_blank">https://www.jetbrains.com/idea/download/</a>. Selecciona la
+                                        edición (Community o Ultimate) y sigue las instrucciones de instalación.</p>
+                                </li>
+                                <li>
+                                    <strong>Inicio y Configuración:</strong>
+                                    <p>Después de la instalación, inicia IntelliJ IDEA. Puedes configurar ajustes
+                                        iniciales y seleccionar un tema de color y atajos de teclado según tus
+                                        preferencias.</p>
+                                </li>
+                                <li>
+                                    <strong>Abrir un Proyecto:</strong>
+                                    <ul>
+                                        <li>Selecciona "File" (Archivo) > "Open" (Abrir).</li>
+                                        <li>Navega hasta el directorio de tu proyecto y selecciona el archivo de
+                                            configuración (por ejemplo, pom.xml para proyectos Maven).</li>
+                                        <li>IntelliJ IDEA detectará y abrirá el proyecto.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Explorador de Proyectos:</strong>
+                                    <p>Utiliza el explorador de proyectos para navegar por la estructura de tu proyecto,
+                                        ver archivos, y acceder a las herramientas de refactorización y búsqueda.</p>
+                                </li>
+                                <li>
+                                    <strong>Crear una Clase:</strong>
+                                    <ul>
+                                        <li>En el explorador de proyectos, haz clic derecho en la carpeta donde deseas
+                                            crear la clase.</li>
+                                        <li>Selecciona "New" (Nuevo) > "Java Class" (Clase Java).</li>
+                                        <li>Ingresa un nombre para tu clase y haz clic en "OK".</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Editor de Código:</strong>
+                                    <p>IntelliJ IDEA ofrece un editor de código avanzado con funciones como resaltado de
+                                        sintaxis, autocompletado inteligente, refactorización y navegación rápida entre
+                                        archivos y clases.</p>
+                                </li>
+                                <li>
+                                    <strong>Ejecutar el Programa:</strong>
+                                    <ul>
+                                        <li>En la parte superior derecha del editor, haz clic en el botón verde de
+                                            ejecución o utiliza el atajo de teclado correspondiente.</li>
+                                        <li>Observa la salida en la consola.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Depuración:</strong>
+                                    <p>Coloca puntos de interrupción en tu código, inicia la depuración y utiliza las
+                                        herramientas de depuración para inspeccionar variables, seguir la ejecución y
+                                        solucionar problemas.</p>
+                                </li>
+                                <li>
+                                    <strong>Control de Versiones:</strong>
+                                    <p>IntelliJ IDEA tiene integración con sistemas de control de versiones como Git.
+                                        Puedes clonar repositorios, hacer commits y gestionar ramas directamente desde
+                                        el IDE.</p>
+                                </li>
+                                <li>
+                                    <strong>Plugins y Extensiones:</strong>
+                                    <p>Explora el repositorio de plugins de IntelliJ IDEA para agregar funcionalidades
+                                        adicionales o compatibilidad con otros frameworks y lenguajes.</p>
+                                </li>
+                                <li>
+                                    <strong>Comunidad y Recursos:</strong>
+                                    <p>Únete a la comunidad de usuarios de IntelliJ IDEA. JetBrains ofrece abundantes
+                                        recursos en línea, tutoriales y foros para obtener ayuda y aprender más sobre el
+                                        uso avanzado del IDE.</p>
+                                </li>
+                            </ol>
+
+                            <p>IntelliJ IDEA proporciona una experiencia de desarrollo rica y eficiente, con
+                                herramientas poderosas para aumentar la productividad de los desarrolladores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                            NetBeans
+                        </button>
+                    </h2>
+                    <div id="collapseEighteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1>NetBeans IDE</h1>
+
+                            <p>NetBeans es un entorno de desarrollo integrado (IDE) gratuito y de código abierto que
+                                ofrece soporte para múltiples lenguajes de programación, incluyendo Java. A
+                                continuación, se describen características clave y pasos básicos para usar NetBeans:</p>
+
+                            <ol>
+                                <li>
+                                    <strong>Descarga e Instalación:</strong>
+                                    <p>Descarga NetBeans desde el sitio oficial: <a
+                                            href="https://netbeans.apache.org/download/index.html"
+                                            target="_blank">https://netbeans.apache.org/download/index.html</a>.
+                                        Selecciona la versión que incluya soporte para Java y sigue las instrucciones de
+                                        instalación.</p>
+                                </li>
+                                <li>
+                                    <strong>Inicio y Configuración:</strong>
+                                    <p>Después de la instalación, inicia NetBeans. Puedes configurar ajustes iniciales,
+                                        como la apariencia y el comportamiento del IDE, según tus preferencias.</p>
+                                </li>
+                                <li>
+                                    <strong>Crear un Proyecto:</strong>
+                                    <ul>
+                                        <li>Selecciona "File" (Archivo) > "New Project" (Nuevo Proyecto).</li>
+                                        <li>Elige la categoría y tipo de proyecto, por ejemplo, "Java" > "Java
+                                            Application".</li>
+                                        <li>Ingresa un nombre para tu proyecto y haz clic en "Finish" (Finalizar).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Explorador de Proyectos:</strong>
+                                    <p>Utiliza el explorador de proyectos para navegar por la estructura de tu proyecto,
+                                        ver archivos y acceder a las herramientas de refactorización y búsqueda.</p>
+                                </li>
+                                <li>
+                                    <strong>Crear una Clase:</strong>
+                                    <ul>
+                                        <li>En el explorador de proyectos, haz clic derecho en la carpeta donde deseas
+                                            crear la clase.</li>
+                                        <li>Selecciona "New" (Nuevo) > "Java Class" (Clase Java).</li>
+                                        <li>Ingresa un nombre para tu clase y haz clic en "Finish" (Finalizar).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Editor de Código:</strong>
+                                    <p>NetBeans proporciona un editor de código con funciones como resaltado de
+                                        sintaxis, autocompletado, y navegación rápida entre archivos y clases.</p>
+                                </li>
+                                <li>
+                                    <strong>Ejecutar el Programa:</strong>
+                                    <ul>
+                                        <li>Haz clic en el botón de ejecución verde en la barra de herramientas.</li>
+                                        <li>Observa la salida en la consola.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Depuración:</strong>
+                                    <p>Coloca puntos de interrupción en tu código, inicia la depuración y utiliza las
+                                        herramientas de depuración para inspeccionar variables y seguir la ejecución.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Control de Versiones:</strong>
+                                    <p>NetBeans tiene soporte integrado para sistemas de control de versiones como Git.
+                                        Puedes clonar repositorios, hacer commits y gestionar ramas directamente desde
+                                        el IDE.</p>
+                                </li>
+                                <li>
+                                    <strong>Plugins y Extensiones:</strong>
+                                    <p>Explora la plataforma NetBeans para encontrar plugins que mejoren tus capacidades
+                                        de desarrollo y añadan soporte para tecnologías específicas.</p>
+                                </li>
+                                <li>
+                                    <strong>Comunidad y Recursos:</strong>
+                                    <p>Únete a la comunidad de usuarios de NetBeans. Hay recursos en línea, tutoriales y
+                                        foros para obtener ayuda y aprender más sobre el uso avanzado del IDE.</p>
+                                </li>
+                            </ol>
+
+                            <p>NetBeans ofrece una interfaz amigable y herramientas poderosas para el desarrollo de
+                                software en Java y otros lenguajes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

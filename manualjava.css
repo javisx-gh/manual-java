@@ -1,0 +1,11 @@
+.imagen-logo {
+    text-align: center;
+}
+
+.content-container {
+    background-color: #eeeeee; /* Fondo blanco */
+    border-radius: 2%; /* Esquinas del cuadro redondeadas */
+    border-style: solid; /* Bordes del cuadro visibles */
+    margin: 20px; /* Márgenes alrededor del cuadro blanco */
+    padding: 50px; /* Relleno dentro del cuadro blanco */
+}
